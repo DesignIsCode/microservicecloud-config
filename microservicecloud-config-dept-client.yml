@@ -1,0 +1,66 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+---
+server:
+  port: 8081
+spring:
+  profiles: dev #开发环境
+  application: 
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://106.14.191.232:3306/microservicecloud
+    username: root
+    password: Qiqi1990
+    dbcp2:
+      initial-size: 5
+      min-idle: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: org.zzq.microservicecloud.entity
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka  #单机版配置
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8081 #自定义服务名称信息
+    prefer-ip-address: true #访问路径可以显示IP地址
+---
+server:
+  port: 8081
+spring:
+  profiles: test #开发环境
+  application: 
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://106.14.191.232:3306/microservicecloud
+    username: root
+    password: Qiqi1990
+    dbcp2:
+      initial-size: 5
+      min-idle: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: org.zzq.microservicecloud.entity
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka  #单机版配置
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8081 #自定义服务名称信息
+    prefer-ip-address: true #访问路径可以显示IP地址

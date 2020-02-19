@@ -28,7 +28,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001:7001/eureka  #单机版配置
+      defaultZone: http://eureka7001.com:7001/eureka  #单机版配置
 #      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
     instance-id: microservicecloud-dept8081 #自定义服务名称信息
@@ -59,7 +59,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001:7001/eureka  #单机版配置
+      defaultZone: http://eureka7001.com:7001/eureka  #单机版配置
 #      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
     instance-id: microservicecloud-dept8081 #自定义服务名称信息
